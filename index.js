@@ -15,6 +15,9 @@ connectDB();
 
 // Routes
 app.use("/api", contactRoutes);
+app.get("/", (req, res) => {
+  res.json({ message: "welcome to VTS" });
+});
 
 // Start Server
 const PORT = process.env.PORT || 5000;
